@@ -1,0 +1,14 @@
+tiempo,actor,tecnica,resultado,mantencion,pos_A,pos_O,puntaje_A,puntaje_O
+14,A,T01_Derribo_de_Doble_Pierna_exitoso,exito,8,Guardia_Abierta_Superior,Guardia_Abierta_Inferior,0,0
+26,O,T46_inv_Establecer_Guardia_de_Mariposa_fallido,fallo,7,Guardia_Abierta_Superior,Guardia_Abierta_Inferior,0,0
+38,O,T46_inv_Establecer_Guardia_de_Mariposa_exitoso,exito,7,Guardia_Mariposa_Superior,Guardia_Mariposa_Inferior,0,0
+54,A,T29_Pasaje_de_Doble_Esgrima_exitoso,exito,10,Control_Lateral_Superior,Control_Lateral_Inferior,0,0
+67,O,T19_inv_Recuperación_de_Guardia_(Reguard)_exitoso,exito,6,Guardia_Cerrada_Superior,Guardia_Cerrada_Inferior,0,0
+81,A,T50_Recomponer_Postura_exitoso,exito,8,Guardia_Abierta_Superior,Guardia_Abierta_Inferior,0,0
+100,O,T45_inv_Establecer_Guardia_De_La_Riva_exitoso,exito,13,Guardia_DLR_Superior,Guardia_DLR_Inferior,0,0
+118,A,T33_Pasaje_de_Arrastre_de_Pierna_exitoso,exito,8,Control_Lateral_Superior,Control_Lateral_Inferior,0,0
+133,O,T19_inv_Recuperación_de_Guardia_(Reguard)_fallido,fallo,8,Norte_Sur_Superior,Norte_Sur_Inferior,0,0
+152,A,T47_Estrangulamiento_Norte-Sur_fallido,fallo,11,Norte_Sur_Superior,Norte_Sur_Inferior,0,0
+174,A,T47_Estrangulamiento_Norte-Sur_fallido,fallo,14,Norte_Sur_Superior,Norte_Sur_Inferior,0,0
+197,A,T47_Estrangulamiento_Norte-Sur_fallido,fallo,15,Norte_Sur_Superior,Norte_Sur_Inferior,0,0
+221,A,T47_Estrangulamiento_Norte-Sur_exitoso,exito,16,,,10,0

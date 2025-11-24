@@ -1,0 +1,14 @@
+tiempo,actor,tecnica,resultado,mantencion,pos_A,pos_O,puntaje_A,puntaje_O
+24,O,T32_inv_Derribo_a_una_Pierna_fallido,fallo,14,De_Pie,De_Pie,0,0
+46,A,T32_Derribo_a_una_Pierna_exitoso,exito,12,Media_Guardia_Superior,Media_Guardia_Inferior,10,0
+64,A,T49_Pasaje_de_Aplastamiento_(Smash)_exitoso,exito,11,Control_Lateral_Superior,Control_Lateral_Inferior,10,0
+79,O,T19_inv_Recuperación_de_Guardia_(Reguard)_exitoso,exito,8,Guardia_Cerrada_Superior,Guardia_Cerrada_Inferior,10,6
+100,O,T06_inv_Estrangulamiento_de_Triángulo_fallido,fallo,11,Guardia_Abierta_Superior,Guardia_Abierta_Inferior,10,6
+121,A,T03_Pase_de_Guardia_Torreando_fallido,fallo,14,Guardia_Abierta_Superior,Guardia_Abierta_Inferior,10,6
+133,O,T46_inv_Establecer_Guardia_de_Mariposa_exitoso,exito,7,Guardia_Mariposa_Superior,Guardia_Mariposa_Inferior,10,6
+149,A,T29_Pasaje_de_Doble_Esgrima_fallido,fallo,10,Guardia_Mariposa_Superior,Guardia_Mariposa_Inferior,10,6
+166,A,T29_Pasaje_de_Doble_Esgrima_exitoso,exito,11,Control_Lateral_Superior,Control_Lateral_Inferior,20,6
+178,O,T19_inv_Recuperación_de_Guardia_(Reguard)_exitoso,exito,5,Guardia_Cerrada_Superior,Guardia_Cerrada_Inferior,20,6
+199,O,T07_inv_Palanca_de_Brazo_(Armbar)_fallido,fallo,12,Guardia_Abierta_Superior,Guardia_Abierta_Inferior,20,6
+211,A,T05_Pase_de_Guardia_por_Apilamiento_exitoso,exito,6,Norte_Sur_Superior,Norte_Sur_Inferior,25,6
+231,A,T47_Estrangulamiento_Norte-Sur_exitoso,exito,12,,,25,6

@@ -1,0 +1,4 @@
+tiempo,actor,tecnica,resultado,mantencion,pos_A,pos_O,puntaje_A,puntaje_O
+17,O,T01_inv_Derribo_de_Doble_Pierna_exitoso,exito,11,Guardia_Abierta_Inferior,Guardia_Abierta_Superior,0,5
+41,A,T34_Raspado_de_Péndulo_exitoso,exito,16,Montada_Superior,Montada_Inferior,10,5
+62,A,T13_Palanca_de_Brazo_desde_Montada_exitoso,exito,11,,,17,5
