@@ -190,21 +190,85 @@ def calcular_iniciativa(datos):
     iniciativa = (fuerza * 0.4 + velocidad * 0.6) * energia + random.uniform(-0.1, 0.1)
     return iniciativa
 
+#permite modificar el gasto de energia de un luchador en base a sus atributos y categoría de técnica a ejecutar
+def mod_stamina(actor, tecnica):
+    datos_tecnica = info_tecnica(tecnica.name)
+    categoria = datos_tecnica["categoria"].lower()
+    costo_base = datos_tecnica.get("costo_stamina", 100)  # valor por defecto
+
+    # Normalización de categoría
+    if categoria in ["derribo", "pase de guardia", "sumisión"]:
+        categoria = "ofensiva"
+    elif categoria == "escape":
+        categoria = "defensiva"
+    else:
+        categoria = "neutral"
+
+    # Selección de atributos según categoría
+    if categoria == "ofensiva":
+        X = (actor.get("velAt", 0) + actor.get("fueAt", 0)) / 2
+    elif categoria == "defensiva":
+        X = (actor.get("velDef", 0) + actor.get("fueDef", 0)) / 2
+    else:  # neutral
+        X = (
+            actor.get("velAt", 0) + actor.get("fueAt", 0) +
+            actor.get("velDef", 0) + actor.get("fueDef", 0)
+        ) / 4
+
+    # Factor de eficiencia normalizado en rango aprox 0 a 1
+    F = X / 10
+    # Modificador: oscila aprox entre 0.6 y 1.4
+    M = 1 - 0.4 * (F - 0.5)
+    # Costo final entero
+    costo_final = round(costo_base * M)
+    # Siempre al menos 1
+    return max(1, costo_final)
+
+
+#probabilidad de exito toma atributos de luchador y categoria y define si una técnica es exitosa o fallida, retorna bool.
+def prob_exito(actor, tecnica):
+    nombre_tec = tecnica.name
+    datos_tecnica = info_tecnica(nombre_tec)
+    categoria = datos_tecnica["categoria"]
+    #normalizacion decategoria 
+    if categoria.lower() in ["derribo", "pase de guardia", "sumisión"]:
+        categoria = "ofensiva"
+    elif categoria.lower() == "escape":
+        categoria = "defensiva"
+    else:
+        categoria = "neutral"
+    #seleción de T segun categoria
+    if categoria.lower() == "ofensiva":
+        T = (actor.get("velAt", 0) + actor.get("fueAt", 0)) / 10
+    elif categoria.lower() == "defensiva":
+        T = (actor.get("velDef", 0) + actor.get("fueDef", 0)) / 10
+    elif categoria.lower() == "neutral":
+        T = (actor.get("velAt", 0) + actor.get("fueAt", 0) +
+             actor.get("velDef", 0) + actor.get("fueDef", 0)) / 20
+    else:
+        raise ValueError("Categoría de técnica no válida.")
+    
+    E = actor.get("energy", 0) / 100
+    P = (T * E) * 0.8
+    n = random.random()
+    return n < P
+
+
 #ejecución de técnica selecionada y retorna el resultado de exito o fallo
 def ejecutar_tecnica(actor_dict, tecnica, tiempo_simulacion):
-    prob = random.random()
-    umbral = random.uniform(0.4, 0.9)
     nombre = tecnica.name  # ej: "T26_exitoso"
-
+    
     # Obtener datos desde el grafo
-    datos = info_tecnica(nombre)
+    datos = info_tecnica(nombre) #trae los datos de la técnica por ID
     tiempo_posicion = datos["tiempo_posicion"]
     categoria = datos["categoria"]
-    costo_stamina = datos["costo_stamina"]
+    costo_stamina = mod_stamina(actor_dict, tecnica) #se calcula con la función de modificación
     tiempo_ejec = datos["tiempo_ejecucion_s"]
     puntaje = datos["puntaje"]
+    
     #genera un numero randomico entre el 20%+- del tiempo en posición, para despues comparar y poder asignar el puntaje
     random_posicion = random.uniform((tiempo_posicion*0.8),(tiempo_posicion*1.2))
+    
     #truncamos si es menor redondeamos si es mayor (para manejar numeros enteros)
     if random_posicion >= tiempo_posicion:
         random_ajustado = round(random_posicion)
@@ -212,18 +276,20 @@ def ejecutar_tecnica(actor_dict, tecnica, tiempo_simulacion):
         random_ajustado = math.floor(random_posicion)
 
     #REVISION DE SUMISION, SOLO SE EJECUTA LA SUMISION EXITOSA SI LA TECNICA LOGRA SER MANTENIDA MAS QUE EL TIEMPO PROMEDIO DEFINIDO EN EL GRAFO
-    if categoria == "Sumisión":
+    if categoria == "Sumisión" and prob_exito(actor_dict, tecnica):
         if random_posicion >= tiempo_posicion:
             net.transition(nombre).fire(frozenset())    #dispara transición
             actor_dict["energy"] -= costo_stamina       #resta stamina
             tiempo_simulacion += tiempo_ejec            #suma tiempo ejecucion
-            tiempo_simulacion += random_ajustado       #suma tiempo de mantencion de tecnica
+            tiempo_simulacion += random_ajustado
+            return "exito", nombre, tiempo_simulacion, random_ajustado       #suma tiempo de mantencion de tecnica
         else:
             nombre_fallida = nombre.replace("_exitoso", "_fallido")             #cambia a la version fallida de la sumisión 
             net.transition(nombre_fallida).fire(frozenset())                    #dispara la version fallida
+            return "fallo", nombre, tiempo_simulacion, random_ajustado
     
     #EJECUCION DE TECNICA QUE NO ES DE SUMISION
-    if prob <= umbral:  # ÉXITO
+    if prob_exito(actor_dict, tecnica):  # ÉXITO
         net.transition(nombre).fire(frozenset())
         #siempre resta energia y suma el tiempo de ejecución
         actor_dict["energy"] -= costo_stamina                   #resta energia
@@ -294,6 +360,7 @@ while tiempo < max_pasos: #mientras no se supere el máximo de pasos
     # Ejecutar técnica del actor con mayor iniciativa
     resultado, tecnica_final, tiempo, mantencion = ejecutar_tecnica(actor_dict, tecnica, tiempo)
 
+    print(tecnica)
     # Obtener posiciones actuales
     posiciones = obtener_posiciones()
     posA = posiciones["A"]
