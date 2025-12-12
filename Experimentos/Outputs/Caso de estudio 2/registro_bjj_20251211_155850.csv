@@ -1,0 +1,5 @@
+tiempo,actor,tecnica,resultado,mantencion,pos_A,pos_O,puntaje_A,puntaje_O
+14,A,T01_Derribo_de_Doble_Pierna_fallido,fallo,8,De_Pie,De_Pie,0,0
+36,O,T02_inv_Proyección_Osoto_Gari_exitoso,exito,13,Control_Lateral_Inferior,Control_Lateral_Superior,0,9
+50,O,T41_inv_Transición_a_Norte-Sur_exitoso,exito,6,Norte_Sur_Inferior,Norte_Sur_Superior,0,9
+70,O,T47_inv_Estrangulamiento_Norte-Sur_exitoso,exito,12,,,0,9

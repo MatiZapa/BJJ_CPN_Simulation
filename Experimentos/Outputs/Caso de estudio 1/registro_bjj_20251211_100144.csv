@@ -1,0 +1,13 @@
+tiempo,actor,tecnica,resultado,mantencion,pos_A,pos_O,puntaje_A,puntaje_O
+15,O,T01_inv_Derribo_de_Doble_Pierna_exitoso,exito,9,Guardia_Abierta_Inferior,Guardia_Abierta_Superior,0,5
+33,O,T03_inv_Pase_de_Guardia_Torreando_fallido,fallo,11,Guardia_Abierta_Inferior,Guardia_Abierta_Superior,0,5
+53,A,T45_Establecer_Guardia_De_La_Riva_fallido,fallo,14,Guardia_Abierta_Inferior,Guardia_Abierta_Superior,0,5
+63,O,T44_inv_Forzar_Media_Guardia_exitoso,exito,5,Media_Guardia_Inferior,Media_Guardia_Superior,0,11
+84,O,T49_inv_Pasaje_de_Aplastamiento_(Smash)_exitoso,exito,14,Control_Lateral_Inferior,Control_Lateral_Superior,0,20
+106,O,T14_inv_Kimura_desde_Control_Lateral_fallido,fallo,17,Guardia_Abierta_Superior,Guardia_Abierta_Inferior,0,20
+119,O,T46_inv_Establecer_Guardia_de_Mariposa_exitoso,exito,8,Guardia_Mariposa_Superior,Guardia_Mariposa_Inferior,0,28
+138,A,T29_Pasaje_de_Doble_Esgrima_fallido,fallo,13,Guardia_Mariposa_Superior,Guardia_Mariposa_Inferior,0,28
+154,A,T29_Pasaje_de_Doble_Esgrima_fallido,fallo,10,Guardia_Mariposa_Superior,Guardia_Mariposa_Inferior,0,28
+172,A,T29_Pasaje_de_Doble_Esgrima_exitoso,exito,12,Control_Lateral_Superior,Control_Lateral_Inferior,10,28
+187,O,T19_inv_Recuperación_de_Guardia_(Reguard)_fallido,fallo,8,Norte_Sur_Superior,Norte_Sur_Inferior,10,28
+210,A,T47_Estrangulamiento_Norte-Sur_exitoso,exito,15,,,20,28

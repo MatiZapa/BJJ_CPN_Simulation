@@ -1,0 +1,7 @@
+tiempo,actor,tecnica,resultado,mantencion,pos_A,pos_O,puntaje_A,puntaje_O
+16,O,T01_inv_Derribo_de_Doble_Pierna_exitoso,exito,10,Guardia_Abierta_Inferior,Guardia_Abierta_Superior,0,5
+25,O,T44_inv_Forzar_Media_Guardia_fallido,fallo,4,Guardia_Abierta_Inferior,Guardia_Abierta_Superior,0,5
+34,O,T44_inv_Forzar_Media_Guardia_fallido,fallo,4,Guardia_Abierta_Inferior,Guardia_Abierta_Superior,0,5
+53,O,T03_inv_Pase_de_Guardia_Torreando_exitoso,exito,12,Control_Lateral_Inferior,Control_Lateral_Superior,0,5
+67,O,T22_inv_Transición_a_la_Montada_exitoso,exito,7,Montada_Inferior,Montada_Superior,0,5
+88,O,T42_inv_Transición_a_S-Mount_exitoso,exito,16,S-Mount_Inferior,S-Mount_Superior,0,12

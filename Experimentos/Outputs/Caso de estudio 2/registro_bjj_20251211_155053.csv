@@ -1,0 +1,3 @@
+tiempo,actor,tecnica,resultado,mantencion,pos_A,pos_O,puntaje_A,puntaje_O
+13,A,T01_Derribo_de_Doble_Pierna_exitoso,exito,7,Guardia_Abierta_Superior,Guardia_Abierta_Inferior,0,0
+30,O,T10_inv_Omoplata_exitoso,exito,11,,,0,5

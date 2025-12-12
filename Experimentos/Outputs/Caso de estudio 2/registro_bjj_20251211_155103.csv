@@ -1,0 +1,10 @@
+tiempo,actor,tecnica,resultado,mantencion,pos_A,pos_O,puntaje_A,puntaje_O
+15,O,T01_inv_Derribo_de_Doble_Pierna_exitoso,exito,9,Guardia_Abierta_Inferior,Guardia_Abierta_Superior,0,5
+33,O,T48_inv_Pasaje_por_Encima_(Over-Under)_fallido,fallo,13,Guardia_Cerrada_Inferior,Guardia_Cerrada_Superior,0,5
+51,O,T50_inv_Recomponer_Postura_exitoso,exito,12,Guardia_Abierta_Inferior,Guardia_Abierta_Superior,0,14
+64,O,T05_inv_Pase_de_Guardia_por_Apilamiento_fallido,fallo,7,Guardia_Cerrada_Inferior,Guardia_Cerrada_Superior,0,14
+79,O,T50_inv_Recomponer_Postura_fallido,fallo,9,Guardia_Cerrada_Inferior,Guardia_Cerrada_Superior,0,14
+94,O,T50_inv_Recomponer_Postura_fallido,fallo,9,Guardia_Cerrada_Inferior,Guardia_Cerrada_Superior,0,14
+112,A,T09_Raspado_de_Tijera_exitoso,exito,13,Montada_Superior,Montada_Inferior,9,14
+130,O,T17_inv_Escape_de_Upa_(Puente_y_Giro)_exitoso,exito,13,Media_Guardia_Superior,Media_Guardia_Inferior,9,14
+148,A,T49_Pasaje_de_Aplastamiento_(Smash)_fallido,fallo,11,Media_Guardia_Superior,Media_Guardia_Profunda_Inferior,9,14

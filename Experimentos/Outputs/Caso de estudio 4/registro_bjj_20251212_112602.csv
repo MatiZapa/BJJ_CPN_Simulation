@@ -1,0 +1,10 @@
+tiempo,actor,tecnica,resultado,mantencion,pos_A,pos_O,puntaje_A,puntaje_O
+17,O,T31_inv_Llamada_a_la_Guardia_(Guard_Pull)_fallido,fallo,10,Guardia_Abierta_Superior,Guardia_Abierta_Inferior,0,0
+35,A,T48_Pasaje_por_Encima_(Over-Under)_fallido,fallo,13,Guardia_Cerrada_Superior,Guardia_Cerrada_Inferior,0,0
+48,O,T09_inv_Raspado_de_Tijera_fallido,fallo,8,Guardia_Abierta_Superior,Guardia_Abierta_Inferior,0,0
+62,O,T10_inv_Omoplata_fallido,fallo,8,Guardia_Abierta_Superior,Guardia_Abierta_Inferior,0,0
+82,O,T34_inv_Raspado_de_Péndulo_fallido,fallo,12,Control_Lateral_Superior,Control_Lateral_Inferior,0,0
+96,O,T19_inv_Recuperación_de_Guardia_(Reguard)_fallido,fallo,7,Norte_Sur_Superior,Norte_Sur_Inferior,0,0
+120,A,T47_Estrangulamiento_Norte-Sur_fallido,fallo,16,Norte_Sur_Superior,Norte_Sur_Inferior,0,0
+145,A,T47_Estrangulamiento_Norte-Sur_fallido,fallo,17,Norte_Sur_Superior,Norte_Sur_Inferior,0,0
+168,A,T47_Estrangulamiento_Norte-Sur_exitoso,exito,15,,,10,0

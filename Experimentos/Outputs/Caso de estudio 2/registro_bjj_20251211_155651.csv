@@ -1,0 +1,5 @@
+tiempo,actor,tecnica,resultado,mantencion,pos_A,pos_O,puntaje_A,puntaje_O
+20,O,T02_inv_Proyección_Osoto_Gari_fallido,fallo,11,De_Pie,De_Pie,0,0
+34,A,T01_Derribo_de_Doble_Pierna_exitoso,exito,8,Guardia_Abierta_Superior,Guardia_Abierta_Inferior,0,0
+50,A,T48_Pasaje_por_Encima_(Over-Under)_exitoso,exito,11,Control_Lateral_Superior,Control_Lateral_Inferior,0,0
+71,A,T14_Kimura_desde_Control_Lateral_exitoso,exito,16,,,8,0

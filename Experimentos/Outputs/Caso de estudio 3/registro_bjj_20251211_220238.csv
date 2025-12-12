@@ -1,0 +1,11 @@
+tiempo,actor,tecnica,resultado,mantencion,pos_A,pos_O,puntaje_A,puntaje_O
+16,A,T31_Llamada_a_la_Guardia_(Guard_Pull)_fallido,fallo,9,Guardia_Abierta_Inferior,Guardia_Abierta_Superior,0,0
+41,A,T34_Raspado_de_Péndulo_exitoso,exito,17,Montada_Superior,Montada_Inferior,10,0
+63,O,T17_inv_Escape_de_Upa_(Puente_y_Giro)_fallido,fallo,17,Montada_Superior,Montada_Inferior,10,0
+79,A,T12_Estrangulamiento_Cruzado_fallido,fallo,9,Montada_Superior,Montada_Inferior,10,0
+96,A,T12_Estrangulamiento_Cruzado_fallido,fallo,10,Montada_Superior,Montada_Inferior,10,0
+117,O,T17_inv_Escape_de_Upa_(Puente_y_Giro)_exitoso,exito,16,Media_Guardia_Superior,Media_Guardia_Inferior,10,9
+135,A,T04_Pase_de_Rodilla_Deslizante_fallido,fallo,10,Media_Guardia_Superior,Media_Guardia_Inferior,10,9
+153,A,T49_Pasaje_de_Aplastamiento_(Smash)_exitoso,exito,11,Control_Lateral_Superior,Control_Lateral_Inferior,10,9
+167,O,T19_inv_Recuperación_de_Guardia_(Reguard)_exitoso,exito,7,Guardia_Cerrada_Superior,Guardia_Cerrada_Inferior,10,15
+189,O,T08_inv_Estrangulamiento_de_Guillotina_exitoso,exito,12,,,10,21

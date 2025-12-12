@@ -1,0 +1,5 @@
+tiempo,actor,tecnica,resultado,mantencion,pos_A,pos_O,puntaje_A,puntaje_O
+16,O,T01_inv_Derribo_de_Doble_Pierna_fallido,fallo,10,De_Pie,De_Pie,0,0
+30,O,T01_inv_Derribo_de_Doble_Pierna_exitoso,exito,8,Guardia_Abierta_Inferior,Guardia_Abierta_Superior,0,0
+39,O,T44_inv_Forzar_Media_Guardia_exitoso,exito,4,Media_Guardia_Inferior,Media_Guardia_Superior,0,0
+56,O,T49_inv_Pasaje_de_Aplastamiento_(Smash)_fallido,fallo,10,Media_Guardia_Profunda_Inferior,Media_Guardia_Superior,0,0

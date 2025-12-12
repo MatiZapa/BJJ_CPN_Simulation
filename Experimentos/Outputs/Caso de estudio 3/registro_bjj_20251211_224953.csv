@@ -1,0 +1,9 @@
+tiempo,actor,tecnica,resultado,mantencion,pos_A,pos_O,puntaje_A,puntaje_O
+17,A,T31_Llamada_a_la_Guardia_(Guard_Pull)_exitoso,exito,10,Guardia_Cerrada_Inferior,Guardia_Cerrada_Superior,0,0
+29,O,T25_inv_Ponerse_de_Pie_en_la_Guardia_fallido,fallo,4,Guardia_Cerrada_Inferior,Guardia_Cerrada_Superior,0,0
+44,O,T50_inv_Recomponer_Postura_exitoso,exito,9,Guardia_Abierta_Inferior,Guardia_Abierta_Superior,0,0
+66,O,T03_inv_Pase_de_Guardia_Torreando_fallido,fallo,15,Guardia_Abierta_Inferior,Guardia_Abierta_Superior,0,0
+89,A,T45_Establecer_Guardia_De_La_Riva_exitoso,exito,17,Guardia_DLR_Inferior,Guardia_DLR_Superior,8,0
+108,O,T33_inv_Pasaje_de_Arrastre_de_Pierna_exitoso,exito,9,Control_Lateral_Inferior,Control_Lateral_Superior,8,0
+124,O,T22_inv_Transición_a_la_Montada_exitoso,exito,9,Montada_Inferior,Montada_Superior,8,6
+144,A,T17_Escape_de_Upa_(Puente_y_Giro)_exitoso,exito,15,Media_Guardia_Inferior,Media_Guardia_Superior,17,6

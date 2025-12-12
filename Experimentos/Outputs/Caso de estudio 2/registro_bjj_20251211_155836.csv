@@ -1,0 +1,11 @@
+tiempo,actor,tecnica,resultado,mantencion,pos_A,pos_O,puntaje_A,puntaje_O
+15,A,T01_Derribo_de_Doble_Pierna_exitoso,exito,9,Guardia_Abierta_Superior,Guardia_Abierta_Inferior,5,0
+34,O,T45_inv_Establecer_Guardia_De_La_Riva_exitoso,exito,13,Guardia_DLR_Superior,Guardia_DLR_Inferior,5,0
+49,O,T27_inv_Raspado_de_De_La_Riva_exitoso,exito,9,Control_Lateral_Inferior,Control_Lateral_Superior,5,10
+64,A,T19_Recuperación_de_Guardia_(Reguard)_exitoso,exito,8,Guardia_Cerrada_Inferior,Guardia_Cerrada_Superior,11,10
+82,A,T09_Raspado_de_Tijera_fallido,fallo,13,Guardia_Abierta_Inferior,Guardia_Abierta_Superior,11,10
+98,O,T48_inv_Pasaje_por_Encima_(Over-Under)_exitoso,exito,11,Control_Lateral_Inferior,Control_Lateral_Superior,11,10
+111,A,T19_Recuperación_de_Guardia_(Reguard)_fallido,fallo,6,Norte_Sur_Inferior,Norte_Sur_Superior,11,10
+133,O,T47_inv_Estrangulamiento_Norte-Sur_fallido,fallo,14,Norte_Sur_Inferior,Norte_Sur_Superior,11,10
+156,O,T47_inv_Estrangulamiento_Norte-Sur_fallido,fallo,15,Norte_Sur_Inferior,Norte_Sur_Superior,11,10
+176,O,T47_inv_Estrangulamiento_Norte-Sur_exitoso,exito,12,,,11,10

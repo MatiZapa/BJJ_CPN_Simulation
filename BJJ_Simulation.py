@@ -15,9 +15,12 @@ O = None
 
 #CARGA DE DATOS--------------------------------------------------------------------------------------------------------------------
 #LUCHADORES
+
+INPUT_DIR = "Experimentos/Inputs/Caso4.json"
+OUTPUT_DIR = "Experimentos/Outputs/Caso de estudio 4"
 try:
     # Intento de abrir el archivo
-    with open("Input/Luchadores.json", "r", encoding="utf-8") as f:
+    with open(INPUT_DIR, "r", encoding="utf-8") as f:
         luchadores = json.load(f)
 
     # Validar que existan las claves esperadas para los luchadores
@@ -31,7 +34,7 @@ try:
 
 #archivo no encontrado
 except FileNotFoundError:
-    print("ERROR: No se encontró el archivo 'Input/Luchadores.json'. Verifica la ruta.")
+    print(f"ERROR: No se encontró el archivo {INPUT_DIR}. Verifica la ruta.")
 
 #error de formato
 except json.JSONDecodeError as e:
@@ -183,18 +186,67 @@ def filtrar_por_repertorio(habilitadas, repertorio):
 
 #calcular iniciativa funciona en base a los atributos de un luchador, combina velocidad y fuerza (promedio), considerando la energía
 #se usa luego para ver que luchador hace su ataque primero
-def calcular_iniciativa(datos):
-    fuerza = (datos.get("fueAt", 0) + datos.get("fueDef", 0)) / 2
-    velocidad = (datos.get("velAt", 0) + datos.get("velDef", 0)) / 2
-    energia = datos.get("energy", 100) / 100  # normalizada (0–1)
-    iniciativa = (fuerza * 0.4 + velocidad * 0.6) * energia + random.uniform(-0.1, 0.1)
+def calcular_iniciativa(datos, tecnica):
+    # Obtener categoría
+    info = info_tecnica(tecnica)
+    categoria = info["categoria"].lower()
+
+    # Normalización de categoría
+    if categoria in ["derribo", "pase de guardia", "sumisión"]:
+        categoria = "ofensiva"
+    elif categoria == "escape":
+        categoria = "defensiva"
+    else:
+        categoria = "neutral"
+
+    # Atributos según categoría (promedios)
+    if categoria == "ofensiva":
+        X = (datos.get("velAt", 0) + datos.get("fueAt", 0)) / 2
+    elif categoria == "defensiva":
+        X = (datos.get("velDef", 0) + datos.get("fueDef", 0)) / 2
+    else:
+        X = (
+            datos.get("velAt", 0) + datos.get("fueAt", 0) +
+            datos.get("velDef", 0) + datos.get("fueDef", 0)
+        ) / 4
+
+    # --- Ajuste por categoría ---
+    U = 3
+    delta = X - U
+    k = 0.08  # más suave
+    ajuste_categoria = delta * k
+
+    # --- Energía con impacto MUY bajo ---
+    energia = datos.get("energy", 100) / 100
+    energia_factor = 0.95 + energia * 0.10  # rango 0.95–1.05
+
+    # --- Posición suavizada ---
+    pos = datos.get("posicion", "neutral")
+    if pos == "dominante":
+        pos_factor = 1.03
+    elif pos == "inferior":
+        pos_factor = 0.97
+    else:
+        pos_factor = 1.0
+
+    # --- Ruido más fuerte para romper ciclos ---
+    ruido = random.uniform(-0.25, 0.25)
+
+    # --- Base MUY COMPRIMIDA ---
+    iniciativa = (X / 5) * 0.30 + ajuste_categoria + ruido
+
+    # Factores externos
+    iniciativa *= energia_factor
+    iniciativa *= pos_factor
+
     return iniciativa
+
 
 #permite modificar el gasto de energia de un luchador en base a sus atributos y categoría de técnica a ejecutar
 def mod_stamina(actor, tecnica):
     datos_tecnica = info_tecnica(tecnica.name)
     categoria = datos_tecnica["categoria"].lower()
-    costo_base = datos_tecnica.get("costo_stamina", 100)  # valor por defecto
+    costo_base = datos_tecnica.get("costo_stamina", 5)  # valor por defecto
 
     # Normalización de categoría
     if categoria in ["derribo", "pase de guardia", "sumisión"]:
@@ -215,14 +267,24 @@ def mod_stamina(actor, tecnica):
             actor.get("velDef", 0) + actor.get("fueDef", 0)
         ) / 4
 
-    # Factor de eficiencia normalizado en rango aprox 0 a 1
-    F = X / 10
-    # Modificador: oscila aprox entre 0.6 y 1.4
-    M = 1 - 0.4 * (F - 0.5)
-    # Costo final entero
-    costo_final = round(costo_base * M)
+    #umbral
+    U = 3
+    delta = X - U
+    #ajuste
+    k = 1.3
+    if delta > 0:
+        A = -int((delta*k).__ceil__())
+    elif delta < 0:
+        A = int((delta*k).__ceil__())
+    else:
+        A = 0
+    
+    #costo final
+    costo_final = costo_base + A
     # Siempre al menos 1
-    return max(1, costo_final)
+    costo_final = max(1, costo_final)
+
+    return costo_final
 
 
 #probabilidad de exito toma atributos de luchador y categoria y define si una técnica es exitosa o fallida, retorna bool.
@@ -249,6 +311,9 @@ def prob_exito(actor, tecnica):
         raise ValueError("Categoría de técnica no válida.")
     
     E = actor.get("energy", 0) / 100
+    #si por abc motivo la energia bajara extremadamente bajo cero, lo toma como 1.
+    if E < 0:
+        E = 0.1 
     P = (T * E) * 0.8
     n = random.random()
     return n < P
@@ -329,9 +394,9 @@ while tiempo < max_pasos: #mientras no se supere el máximo de pasos
     habilitadas_A = transiciones_habilitadas("A")
     habilitadas_O = transiciones_habilitadas("O")
 
-    #DESCOMENTAR ESTO PARA FILTRAR TRANSICIONES
-    #habilitadas_A = filtrar_por_repertorio(habilitadas_A, A["repertorio"])
-    #habilitadas_O = filtrar_por_repertorio(habilitadas_O, O["repertorio"])
+    #filtro repertorio
+    habilitadas_A = filtrar_por_repertorio(habilitadas_A, A["repertorio"])
+    habilitadas_O = filtrar_por_repertorio(habilitadas_O, O["repertorio"])
 
     #verificación si existen técnicas para disparar, si no existen se finaliza la simulación.
     if not habilitadas_A and not habilitadas_O:
@@ -342,10 +407,10 @@ while tiempo < max_pasos: #mientras no se supere el máximo de pasos
     tecnica_A = random.choice(habilitadas_A) if habilitadas_A else None
     tecnica_O = random.choice(habilitadas_O) if habilitadas_O else None
 
-    # Calcular iniciativa, para ver cual de los actores efectúa la técnica 
-    iniciativa_A = calcular_iniciativa(A) if tecnica_A else -1
-    iniciativa_O = calcular_iniciativa(O) if tecnica_O else -1
-
+    # Calcular iniciativa, para ver cual de los actores efectúa la técnica, si no hay tecnica iniciativa = 0
+    iniciativa_A = calcular_iniciativa(A,tecnica_A) if tecnica_A else -1
+    iniciativa_O = calcular_iniciativa(O,tecnica_O) if tecnica_O else -1
+    print(f"iniciativa A: {iniciativa_A}, Iniciativa O: {iniciativa_O}")
     #decisión de quien actúa primero, el que lo haga será quien finalmente ejecute la técnica, el segundo no ejecutará su técnica
     #esto debido a que si alguien ejecuta su técnica, fallida o exitosa, cambia la posición del oponente y la propia
     if iniciativa_A > iniciativa_O and tecnica_A:
@@ -360,7 +425,6 @@ while tiempo < max_pasos: #mientras no se supere el máximo de pasos
     # Ejecutar técnica del actor con mayor iniciativa
     resultado, tecnica_final, tiempo, mantencion = ejecutar_tecnica(actor_dict, tecnica, tiempo)
 
-    print(tecnica)
     # Obtener posiciones actuales
     posiciones = obtener_posiciones()
     posA = posiciones["A"]
@@ -395,7 +459,7 @@ while tiempo < max_pasos: #mientras no se supere el máximo de pasos
 os.makedirs("Output", exist_ok=True)                            #crea directorio si no existe
 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")            #formato año/mes/dia/hora/min/seg
 filename = f"registro_bjj_{timestamp}.csv"                      #nombre del archivo
-filepath = os.path.join("Output", filename)                     #ruta del archivo
+filepath = os.path.join(OUTPUT_DIR, filename)                     #ruta del archivo
 
 with open(filepath, "w", newline="", encoding="utf-8") as f:
     writer = csv.DictWriter(

@@ -1,0 +1,6 @@
+tiempo,actor,tecnica,resultado,mantencion,pos_A,pos_O,puntaje_A,puntaje_O
+23,O,T32_inv_Derribo_a_una_Pierna_fallido,fallo,13,De_Pie,De_Pie,0,0
+44,A,T32_Derribo_a_una_Pierna_fallido,fallo,11,De_Pie,De_Pie,0,0
+61,O,T31_inv_Llamada_a_la_Guardia_(Guard_Pull)_fallido,fallo,10,Guardia_Abierta_Superior,Guardia_Abierta_Inferior,0,0
+74,A,T05_Pase_de_Guardia_por_Apilamiento_exitoso,exito,7,Norte_Sur_Superior,Norte_Sur_Inferior,5,0
+99,A,T47_Estrangulamiento_Norte-Sur_exitoso,exito,17,,,15,0

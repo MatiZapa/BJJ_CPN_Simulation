@@ -1,0 +1,14 @@
+tiempo,actor,tecnica,resultado,mantencion,pos_A,pos_O,puntaje_A,puntaje_O
+18,O,T31_inv_Llamada_a_la_Guardia_(Guard_Pull)_fallido,fallo,11,Guardia_Abierta_Superior,Guardia_Abierta_Inferior,0,0
+31,O,T10_inv_Omoplata_fallido,fallo,7,Guardia_Abierta_Superior,Guardia_Abierta_Inferior,0,0
+43,A,T05_Pase_de_Guardia_por_Apilamiento_fallido,fallo,6,Guardia_Cerrada_Superior,Guardia_Cerrada_Inferior,0,0
+58,A,T50_Recomponer_Postura_fallido,fallo,9,Guardia_Cerrada_Superior,Guardia_Cerrada_Inferior,0,0
+73,A,T50_Recomponer_Postura_fallido,fallo,9,Guardia_Cerrada_Superior,Guardia_Cerrada_Inferior,0,0
+85,A,T25_Ponerse_de_Pie_en_la_Guardia_exitoso,exito,4,Guardia_Abierta_Superior,Guardia_Abierta_Inferior,0,0
+94,A,T44_Forzar_Media_Guardia_fallido,fallo,4,Guardia_Abierta_Superior,Guardia_Abierta_Inferior,0,0
+108,O,T46_inv_Establecer_Guardia_de_Mariposa_fallido,fallo,9,Guardia_Abierta_Superior,Guardia_Abierta_Inferior,0,0
+117,A,T44_Forzar_Media_Guardia_fallido,fallo,4,Guardia_Abierta_Superior,Guardia_Abierta_Inferior,0,0
+130,A,T05_Pase_de_Guardia_por_Apilamiento_exitoso,exito,7,Norte_Sur_Superior,Norte_Sur_Inferior,5,0
+151,A,T47_Estrangulamiento_Norte-Sur_fallido,fallo,13,Norte_Sur_Superior,Norte_Sur_Inferior,5,0
+170,A,T47_Estrangulamiento_Norte-Sur_fallido,fallo,11,Norte_Sur_Superior,Norte_Sur_Inferior,5,0
+193,A,T47_Estrangulamiento_Norte-Sur_exitoso,exito,15,,,15,0

@@ -1,0 +1,13 @@
+tiempo,actor,tecnica,resultado,mantencion,pos_A,pos_O,puntaje_A,puntaje_O
+20,O,T32_inv_Derribo_a_una_Pierna_fallido,fallo,10,De_Pie,De_Pie,0,0
+39,A,T02_Proyección_Osoto_Gari_fallido,fallo,10,De_Pie,De_Pie,0,0
+59,O,T31_inv_Llamada_a_la_Guardia_(Guard_Pull)_fallido,fallo,13,Guardia_Abierta_Superior,Guardia_Abierta_Inferior,0,0
+78,A,T03_Pase_de_Guardia_Torreando_exitoso,exito,12,Control_Lateral_Superior,Control_Lateral_Inferior,0,0
+92,O,T19_inv_Recuperación_de_Guardia_(Reguard)_fallido,fallo,7,Norte_Sur_Superior,Norte_Sur_Inferior,0,0
+114,A,T47_Estrangulamiento_Norte-Sur_fallido,fallo,14,Norte_Sur_Superior,Norte_Sur_Inferior,0,0
+139,A,T47_Estrangulamiento_Norte-Sur_fallido,fallo,17,Norte_Sur_Superior,Norte_Sur_Inferior,0,0
+158,A,T47_Estrangulamiento_Norte-Sur_fallido,fallo,11,Norte_Sur_Superior,Norte_Sur_Inferior,0,0
+177,A,T47_Estrangulamiento_Norte-Sur_fallido,fallo,11,Norte_Sur_Superior,Norte_Sur_Inferior,0,0
+200,A,T47_Estrangulamiento_Norte-Sur_fallido,fallo,15,Norte_Sur_Superior,Norte_Sur_Inferior,0,0
+222,A,T47_Estrangulamiento_Norte-Sur_fallido,fallo,14,Norte_Sur_Superior,Norte_Sur_Inferior,0,0
+243,A,T47_Estrangulamiento_Norte-Sur_exitoso,exito,13,,,0,0

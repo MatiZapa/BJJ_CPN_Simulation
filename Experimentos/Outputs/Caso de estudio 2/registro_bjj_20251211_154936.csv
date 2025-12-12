@@ -1,0 +1,5 @@
+tiempo,actor,tecnica,resultado,mantencion,pos_A,pos_O,puntaje_A,puntaje_O
+17,O,T31_inv_Llamada_a_la_Guardia_(Guard_Pull)_exitoso,exito,10,Guardia_Cerrada_Superior,Guardia_Cerrada_Inferior,0,0
+41,O,T08_inv_Estrangulamiento_de_Guillotina_fallido,fallo,14,Control_Lateral_Superior,Control_Lateral_Inferior,0,0
+57,A,T22_Transición_a_la_Montada_fallido,fallo,9,Media_Guardia_Superior,Media_Guardia_Inferior,0,0
+78,A,T49_Pasaje_de_Aplastamiento_(Smash)_fallido,fallo,14,Media_Guardia_Superior,Media_Guardia_Profunda_Inferior,0,0

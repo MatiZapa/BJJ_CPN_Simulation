@@ -1,0 +1,9 @@
+tiempo,actor,tecnica,resultado,mantencion,pos_A,pos_O,puntaje_A,puntaje_O
+20,A,T31_Llamada_a_la_Guardia_(Guard_Pull)_exitoso,exito,13,Guardia_Cerrada_Inferior,Guardia_Cerrada_Superior,7,0
+39,A,T24_Romper_Postura_en_Guardia_fallido,fallo,12,Guardia_Cerrada_Inferior,Guardia_Cerrada_Superior,7,0
+60,A,T06_Estrangulamiento_de_Triángulo_fallido,fallo,11,Guardia_Abierta_Inferior,Guardia_Abierta_Superior,7,0
+78,A,T45_Establecer_Guardia_De_La_Riva_exitoso,exito,12,Guardia_DLR_Inferior,Guardia_DLR_Superior,7,0
+97,O,T33_inv_Pasaje_de_Arrastre_de_Pierna_fallido,fallo,9,Guardia_Abierta_Inferior,Guardia_Abierta_Superior,7,0
+108,O,T44_inv_Forzar_Media_Guardia_fallido,fallo,6,Guardia_Abierta_Inferior,Guardia_Abierta_Superior,7,0
+127,A,T45_Establecer_Guardia_De_La_Riva_fallido,fallo,13,Guardia_Abierta_Inferior,Guardia_Abierta_Superior,7,0
+137,O,T44_inv_Forzar_Media_Guardia_exitoso,exito,5,Media_Guardia_Inferior,Media_Guardia_Superior,7,6

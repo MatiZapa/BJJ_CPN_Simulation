@@ -1,0 +1,5 @@
+tiempo,actor,tecnica,resultado,mantencion,pos_A,pos_O,puntaje_A,puntaje_O
+14,A,T01_Derribo_de_Doble_Pierna_exitoso,exito,8,Guardia_Abierta_Superior,Guardia_Abierta_Inferior,0,0
+25,A,T44_Forzar_Media_Guardia_exitoso,exito,6,Media_Guardia_Superior,Media_Guardia_Inferior,6,0
+45,A,T04_Pase_de_Rodilla_Deslizante_exitoso,exito,12,Control_Lateral_Superior,Control_Lateral_Inferior,6,0
+61,A,T15_Estrangulamiento_D'Arce_exitoso,exito,6,,,6,0

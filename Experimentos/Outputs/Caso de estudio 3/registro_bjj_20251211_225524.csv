@@ -1,0 +1,6 @@
+tiempo,actor,tecnica,resultado,mantencion,pos_A,pos_O,puntaje_A,puntaje_O
+24,A,T32_Derribo_a_una_Pierna_exitoso,exito,14,Media_Guardia_Superior,Media_Guardia_Inferior,10,0
+45,A,T04_Pase_de_Rodilla_Deslizante_exitoso,exito,13,Control_Lateral_Superior,Control_Lateral_Inferior,17,0
+57,O,T19_inv_Recuperación_de_Guardia_(Reguard)_fallido,fallo,5,Norte_Sur_Superior,Norte_Sur_Inferior,17,0
+80,A,T47_Estrangulamiento_Norte-Sur_fallido,fallo,15,Norte_Sur_Superior,Norte_Sur_Inferior,17,0
+103,A,T47_Estrangulamiento_Norte-Sur_exitoso,exito,15,,,27,0

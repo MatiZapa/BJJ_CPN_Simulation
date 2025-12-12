@@ -1,0 +1,13 @@
+tiempo,actor,tecnica,resultado,mantencion,pos_A,pos_O,puntaje_A,puntaje_O
+19,O,T31_inv_Llamada_a_la_Guardia_(Guard_Pull)_exitoso,exito,12,Guardia_Cerrada_Superior,Guardia_Cerrada_Inferior,0,7
+32,A,T25_Ponerse_de_Pie_en_la_Guardia_fallido,fallo,5,Guardia_Cerrada_Superior,Guardia_Cerrada_Inferior,0,7
+44,A,T25_Ponerse_de_Pie_en_la_Guardia_fallido,fallo,4,Guardia_Cerrada_Superior,Guardia_Cerrada_Inferior,0,7
+59,O,T24_inv_Romper_Postura_en_Guardia_exitoso,exito,8,Guardia_Cerrada_Superior,Guardia_Cerrada_Inferior,0,7
+83,O,T08_inv_Estrangulamiento_de_Guillotina_fallido,fallo,14,Control_Lateral_Superior,Control_Lateral_Inferior,0,7
+96,O,T19_inv_Recuperación_de_Guardia_(Reguard)_exitoso,exito,6,Guardia_Cerrada_Superior,Guardia_Cerrada_Inferior,0,7
+109,A,T25_Ponerse_de_Pie_en_la_Guardia_fallido,fallo,5,Guardia_Cerrada_Superior,Guardia_Cerrada_Inferior,0,7
+130,O,T08_inv_Estrangulamiento_de_Guillotina_fallido,fallo,11,Control_Lateral_Superior,Control_Lateral_Inferior,0,7
+146,A,T22_Transición_a_la_Montada_fallido,fallo,9,Media_Guardia_Superior,Media_Guardia_Inferior,0,7
+165,A,T49_Pasaje_de_Aplastamiento_(Smash)_exitoso,exito,12,Control_Lateral_Superior,Control_Lateral_Inferior,9,7
+181,A,T41_Transición_a_Norte-Sur_exitoso,exito,8,Norte_Sur_Superior,Norte_Sur_Inferior,19,7
+202,A,T47_Estrangulamiento_Norte-Sur_exitoso,exito,13,,,19,7

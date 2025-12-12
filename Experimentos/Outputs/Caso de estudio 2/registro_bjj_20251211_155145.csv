@@ -1,0 +1,7 @@
+tiempo,actor,tecnica,resultado,mantencion,pos_A,pos_O,puntaje_A,puntaje_O
+14,A,T01_Derribo_de_Doble_Pierna_exitoso,exito,8,Guardia_Abierta_Superior,Guardia_Abierta_Inferior,0,0
+26,O,T46_inv_Establecer_Guardia_de_Mariposa_fallido,fallo,7,Guardia_Abierta_Superior,Guardia_Abierta_Inferior,0,0
+35,A,T44_Forzar_Media_Guardia_exitoso,exito,4,Media_Guardia_Superior,Media_Guardia_Inferior,0,0
+56,A,T49_Pasaje_de_Aplastamiento_(Smash)_exitoso,exito,14,Control_Lateral_Superior,Control_Lateral_Inferior,9,0
+68,O,T19_inv_Recuperación_de_Guardia_(Reguard)_fallido,fallo,5,Norte_Sur_Superior,Norte_Sur_Inferior,9,0
+91,A,T47_Estrangulamiento_Norte-Sur_exitoso,exito,15,,,19,0

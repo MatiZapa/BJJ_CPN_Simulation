@@ -1,0 +1,7 @@
+tiempo,actor,tecnica,resultado,mantencion,pos_A,pos_O,puntaje_A,puntaje_O
+20,O,T02_inv_Proyección_Osoto_Gari_fallido,fallo,11,De_Pie,De_Pie,0,0
+34,A,T01_Derribo_de_Doble_Pierna_exitoso,exito,8,Guardia_Abierta_Superior,Guardia_Abierta_Inferior,0,0
+59,O,T34_inv_Raspado_de_Péndulo_fallido,fallo,17,Control_Lateral_Superior,Control_Lateral_Inferior,0,0
+72,O,T19_inv_Recuperación_de_Guardia_(Reguard)_fallido,fallo,6,Norte_Sur_Superior,Norte_Sur_Inferior,0,0
+91,A,T47_Estrangulamiento_Norte-Sur_fallido,fallo,11,Norte_Sur_Superior,Norte_Sur_Inferior,0,0
+114,A,T47_Estrangulamiento_Norte-Sur_exitoso,exito,15,,,10,0

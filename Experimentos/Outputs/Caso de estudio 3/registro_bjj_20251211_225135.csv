@@ -1,0 +1,6 @@
+tiempo,actor,tecnica,resultado,mantencion,pos_A,pos_O,puntaje_A,puntaje_O
+16,A,T01_Derribo_de_Doble_Pierna_fallido,fallo,10,De_Pie,De_Pie,0,0
+35,O,T31_inv_Llamada_a_la_Guardia_(Guard_Pull)_exitoso,exito,12,Guardia_Cerrada_Superior,Guardia_Cerrada_Inferior,0,7
+50,A,T50_Recomponer_Postura_exitoso,exito,9,Guardia_Abierta_Superior,Guardia_Abierta_Inferior,0,7
+71,O,T34_inv_Raspado_de_Péndulo_exitoso,exito,13,Montada_Inferior,Montada_Superior,0,7
+86,O,T11_inv_Americana_desde_Montada_exitoso,exito,8,,,0,17

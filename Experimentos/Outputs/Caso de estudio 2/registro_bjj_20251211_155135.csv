@@ -1,0 +1,5 @@
+tiempo,actor,tecnica,resultado,mantencion,pos_A,pos_O,puntaje_A,puntaje_O
+19,O,T31_inv_Llamada_a_la_Guardia_(Guard_Pull)_exitoso,exito,12,Guardia_Cerrada_Superior,Guardia_Cerrada_Inferior,0,7
+38,O,T24_inv_Romper_Postura_en_Guardia_exitoso,exito,12,Guardia_Cerrada_Superior,Guardia_Cerrada_Inferior,0,14
+53,O,T24_inv_Romper_Postura_en_Guardia_exitoso,exito,8,Guardia_Cerrada_Superior,Guardia_Cerrada_Inferior,0,14
+75,O,T08_inv_Estrangulamiento_de_Guillotina_exitoso,exito,12,,,0,20

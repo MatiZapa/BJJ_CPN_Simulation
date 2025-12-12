@@ -1,0 +1,4 @@
+tiempo,actor,tecnica,resultado,mantencion,pos_A,pos_O,puntaje_A,puntaje_O
+13,A,T01_Derribo_de_Doble_Pierna_exitoso,exito,7,Guardia_Abierta_Superior,Guardia_Abierta_Inferior,0,0
+33,A,T03_Pase_de_Guardia_Torreando_exitoso,exito,13,Control_Lateral_Superior,Control_Lateral_Inferior,0,0
+50,A,T14_Kimura_desde_Control_Lateral_exitoso,exito,12,,,0,0

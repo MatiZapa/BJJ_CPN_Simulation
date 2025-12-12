@@ -1,0 +1,6 @@
+tiempo,actor,tecnica,resultado,mantencion,pos_A,pos_O,puntaje_A,puntaje_O
+17,O,T31_inv_Llamada_a_la_Guardia_(Guard_Pull)_fallido,fallo,10,Guardia_Abierta_Superior,Guardia_Abierta_Inferior,0,0
+29,A,T05_Pase_de_Guardia_por_Apilamiento_fallido,fallo,6,Guardia_Cerrada_Superior,Guardia_Cerrada_Inferior,0,0
+41,A,T25_Ponerse_de_Pie_en_la_Guardia_exitoso,exito,4,Guardia_Abierta_Superior,Guardia_Abierta_Inferior,0,0
+52,A,T05_Pase_de_Guardia_por_Apilamiento_exitoso,exito,5,Norte_Sur_Superior,Norte_Sur_Inferior,0,0
+75,A,T47_Estrangulamiento_Norte-Sur_exitoso,exito,15,,,10,0
